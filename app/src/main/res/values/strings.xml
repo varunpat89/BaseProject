@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BaseProject</string>
+    <string name="wallet">Wallet</string>
+    <string name="chat">Chat</string>
+    <string name="calls">Calls</string>
+    <string name="contacts">Contacts</string>
+
+<!--    <string name="title_onboarding_1">Features introduction 1</string>-->
+<!--    <string name="description_onboarding_1">1 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
+<!--    <string name="thumbnail_onboarding_1"></string>-->
+<!--    <string name="title_onboarding_2">Features introduction 2</string>-->
+<!--    <string name="description_onboarding_2">1 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
+<!--    <string name="thumbnail_onboarding_2"></string>-->
+<!--    <string name="title_onboarding_3">Features introduction 3</string>-->
+<!--    <string name="description_onboarding_3">3 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
+<!--    <string name="thumbnail_onboarding_3"></string>-->
+<!--    <string name="title_onboarding_4">Features introduction 4</string>-->
+<!--    <string name="description_onboarding_4">4 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
+<!--    <string name="thumbnail_onboarding_4"></string>-->
+<!--    <string name="title_onboarding_5">Features introduction 5</string>-->
+<!--    <string name="description_onboarding_5">5 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
+<!--    <string name="thumbnail_onboarding_5">https://cdn.pixabay.com/photo/2014/10/23/10/10/dollars-499481_1280.jpg</string>-->
+    <string name="login">Login</string>
+    <string name="get_started">Get Started</string>
+    <string name="verification_code">Verification code</string>
+    <string name="enter_the_code_we_sent_to">Enter the code we sent to</string>
+    <string name="sign_up">Sign up</string>
+    <string name="government_regulations_requires_us_to_know_more_about_you">Government regulations requires us to know more about you</string>
+    <string name="upload_successful">Upload successful</string>
+    <string name="email_address">Email address</string>
+    <string name="mango_offer_info">Keep me up to date about personalised Mango offers, products and services.</string>
+    <string name="terms_info">I agree to the Terms &amp; Conditions, Privacy Statement</string>
+    <string name="continues">Continue</string>
+    <string name="email">Email</string>
+    <string name="check_your_email_for_a_confirmation_link_to_continue">Check your email for a confirmation link to continue</string>
+</resources>

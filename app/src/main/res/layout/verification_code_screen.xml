@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dimenMedium"
+            android:paddingTop="@dimen/dimenMedium"
+            android:paddingBottom="@dimen/dimenMedium"
+            android:tint="@color/black"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:text="@string/verification_code"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgClose" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewDescription"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:text="@string/enter_the_code_we_sent_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewWrongNumber"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:text="Wrong number?"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/pinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenXXLarge"
+            android:textColor="@color/primary"
+            app:bar_active_color="@color/primary"
+            app:bar_enabled="true"
+            app:bar_inactive_color="@color/gray"
+            app:box_margin="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWrongNumber"
+            app:length="5"
+            app:otp=""
+            app:otp_text_size="@dimen/_16ssp"
+            app:width="@dimen/_40sdp" />
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/primary"
+            android:layout_marginTop="@dimen/dimenXXLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWrongNumber" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewValidatingCode"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:text="Validating Code..."
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewResendCode"
+            style="@style/textView"
+            android:layout_marginBottom="@dimen/dimenXXLarge"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:text="Resend Code in 00:59"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

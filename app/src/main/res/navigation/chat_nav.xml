@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navChat"
+    app:startDestination="@id/chat">
+
+
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.app.baseproject.wallet.ChatScreen"
+        tools:layout="@layout/chat_screen">
+
+    </fragment>
+
+
+</navigation>

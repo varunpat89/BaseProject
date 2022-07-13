@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dimenMedium"
+            android:paddingEnd="@dimen/dimenMedium"
+            android:paddingBottom="@dimen/dimenMedium"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            style="@style/textView"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:gravity="left|center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/check_your_email_for_a_confirmation_link_to_continue"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgClose" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimenXLarge"
+            android:layout_marginEnd="@dimen/dimenXLarge"
+            android:layout_marginBottom="@dimen/dimenLarge"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="@string/continues"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:cornerRadius="@dimen/dimenXSmall"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

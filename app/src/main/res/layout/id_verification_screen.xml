@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimenSmall"
+            android:paddingTop="@dimen/dimenMedium"
+            android:paddingBottom="@dimen/dimenMedium"
+            android:rotation="180"
+            android:src="@drawable/ic_go"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:paddingStart="@dimen/dimenXLarge"
+            android:paddingEnd="@dimen/dimenXLarge"
+            android:text="@string/government_regulations_requires_us_to_know_more_about_you"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBack" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewDescription"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:text="ID verification is validating using Jumio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/iconSize"
+            android:layout_height="@dimen/iconSize"
+            android:indeterminate="true"
+            app:indicatorColor="@color/primary"
+            android:layout_marginTop="@dimen/dimenXXLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewValidatingCode"
+            style="@style/textView"
+            android:layout_marginTop="@dimen/dimenLarge"
+            android:paddingStart="@dimen/dimenXXLarge"
+            android:paddingEnd="@dimen/dimenXXLarge"
+            android:text="Uploading..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
