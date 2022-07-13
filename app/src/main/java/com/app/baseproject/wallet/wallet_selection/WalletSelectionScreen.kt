@@ -8,9 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.app.baseproject.R
-import com.app.baseproject.databinding.OnboardingScreenBinding
 import com.app.baseproject.databinding.WalletSelectionScreenBinding
-import com.app.baseproject.onboarding.OnboardingViewModel
+import com.app.baseproject.utils.AppConstants
 import com.app.baseproject.utils.BBLogger
 import com.app.baseproject.wallet.wallet_selection.di.walletSelectionModule
 import kotlinx.coroutines.flow.collect
@@ -48,7 +47,7 @@ class WalletSelectionScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        BBLogger.error("TAG","onViewCreated")
+        BBLogger.error("TAG", "onViewCreated")
         setObserver()
     }
 
@@ -56,8 +55,8 @@ class WalletSelectionScreen : Fragment() {
         lifecycleScope.launchWhenResumed {
             // Listen to Fiat wallet button click
             viewModel.onFiatWalletClickEvent.collect { event ->
-                event?.handle {
-                    if (shouldSkipThisOnBoarding()) navigateToWalletScreen() else navigateToOnBoardingScreen()
+                event?.handle { walletName ->
+                    if (shouldSkipThisOnBoarding()) navigateToWalletScreen(walletName) else navigateToOnBoardingScreen()
                 }
             }
         }
@@ -72,7 +71,9 @@ class WalletSelectionScreen : Fragment() {
         return viewModel.isOnboardingInfoShown()
     }
 
-    private fun navigateToWalletScreen() {
-        findNavController().navigate(R.id.action_walletSelectionScreen_to_walletScreen)
+    private fun navigateToWalletScreen(walletName: String) {
+        val bundle = Bundle()
+        bundle.putString(AppConstants.WALLET_NAME, walletName)
+        findNavController().navigate(R.id.action_walletSelectionScreen_to_walletScreen, bundle)
     }
 }

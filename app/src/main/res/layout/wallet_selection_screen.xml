@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Fiat Wallet" />
+                android:text="@string/fiat_wallet" />
 
         </com.google.android.material.card.MaterialCardView>
 

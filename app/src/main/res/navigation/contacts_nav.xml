@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/contact"
-        android:name="com.app.baseproject.wallet.ContactScreen"
+        android:name="com.app.baseproject.contact_journey.ContactScreen"
         tools:layout="@layout/contact_screen">
 
     </fragment>

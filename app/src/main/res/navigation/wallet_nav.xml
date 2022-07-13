@@ -57,7 +57,7 @@
 
     <fragment
         android:id="@+id/walletScreen"
-        android:name="com.app.baseproject.wallet.WalletScreen"
+        android:name="com.app.baseproject.wallet.wallet.WalletScreen"
         android:label="Wallet screen"
         tools:layout="@layout/wallet_screen">
 

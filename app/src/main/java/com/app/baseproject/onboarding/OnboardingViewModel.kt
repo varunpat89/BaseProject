@@ -3,7 +3,7 @@ package com.app.baseproject.onboarding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.baseproject.utils.core.SingleEvent
-import com.backbase.retailbanking.onboarding.usecase.OnboardingUseCase
+import com.app.baseproject.onboarding.usecase.OnboardingUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
