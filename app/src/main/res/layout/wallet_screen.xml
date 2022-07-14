@@ -1,221 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.baseproject.wallet.wallet.WalletViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/topBackground"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/primary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.20"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/topBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/topBackgroundTwo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBackground" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imgBack"
-        app:layout_constraintTop_toTopOf="@id/txtTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/dimenSmall"
-        android:tint="@color/white"
-        android:rotation="180"
-        android:src="@drawable/ic_go"
-        />
-
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_14sdp"
-        android:text="FIAT Wallet"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintBottom_toTopOf="@id/cardViewAmount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewAmount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="@id/topBackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topBackground"
-        app:layout_constraintWidth_percent="0.82"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        card_view:cardBackgroundColor="@color/white"
-        card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="@dimen/dimenMedium"
-
-            android:paddingBottom="@dimen/dimenXLarge">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtAmount"
-                style="@style/TextAppearance.MaterialComponents.Headline5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimenMedium"
-                android:text="AED 0.00"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtTransaction"
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimenMedium"
-                android:layout_marginTop="@dimen/dimenSmall"
-                android:text="Transactions"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtAmount" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/dimenMedium"
-                android:text="See all"
-                app:layout_constraintBottom_toBottomOf="@id/txtTransaction"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/txtTransaction" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardSignUp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/_8sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewAmount"
-        app:layout_constraintWidth_percent="0.88"
-        android:layout_marginTop="@dimen/dimenXMedium"
-        card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/primary_light"
-            android:padding="@dimen/dimenXMedium"
-            >
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtInfo"
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimenMedium"
-                android:text="Enjoy Mango wallet Demo and finish signing up for the full experience!"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toStartOf="@id/imgGo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/imgGo"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_go"
-                 />
+            android:layout_marginStart="@dimen/dimenSmall"
+            android:rotation="180"
+            android:src="@drawable/ic_go"
+            android:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTitle" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-
-
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewFeature"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/_14sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardSignUp"
-        app:layout_constraintWidth_percent="0.94"
-        android:layout_marginTop="@dimen/dimenXMedium"
-        app:strokeColor="@color/black"
-        app:strokeWidth="1dp"
-        card_view:cardBackgroundColor="@color/white"
-        card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/dimenSmall"
-            android:paddingBottom="@dimen/dimenLarge">
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toTopOf="@id/cardViewAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txtMainFeature"
-                style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimenMedium"
-                android:text="Main features"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@id/topBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBackground"
+            app:layout_constraintWidth_percent="0.82"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/txtTransfer"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/dimenMedium"
+
+                android:paddingBottom="@dimen/dimenXLarge">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAmount"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimenMedium"
+                    android:text="AED 0.00"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTransaction"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimenMedium"
+                    android:layout_marginTop="@dimen/dimenSmall"
+                    android:text="Transactions"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtAmount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/dimenMedium"
+                    android:text="See all"
+                    app:layout_constraintBottom_toBottomOf="@id/txtTransaction"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txtTransaction" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenXMedium"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewAmount"
+            app:layout_constraintWidth_percent="0.88"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimenSmall"
-                android:enabled="false"
-                android:gravity="center"
+                android:background="@color/primary_light"
+                android:onClick="@{()-> viewModel.onSignUpClick()}"
+                android:orientation="vertical"
+                android:padding="@dimen/dimenXMedium">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtInfo"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimenMedium"
+                    android:text="@string/sign_up_info"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/imgGo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgGo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_go"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewFeature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenXMedium"
+            android:visibility="visible"
+            app:cardCornerRadius="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardSignUp"
+            app:layout_constraintWidth_percent="0.94"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:paddingTop="@dimen/dimenSmall"
-                android:paddingBottom="@dimen/dimenSmall"
-                android:text="Transfer"
-                android:textAllCaps="false"
-                android:textColor="@color/primary"
-                android:textSize="@dimen/_12ssp"
-                app:cornerRadius="@dimen/dimenXSmall"
-                app:layout_constraintStart_toStartOf="@id/txtMainFeature"
-                app:layout_constraintTop_toBottomOf="@id/txtMainFeature"
-                app:strokeColor="@color/primary_light"
-                app:strokeWidth="2dp" />
+                android:paddingBottom="@dimen/dimenLarge">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtMainFeature"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimenMedium"
+                    android:text="Main features"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/txtTransfer"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimenSmall"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimenSmall"
+                    android:paddingBottom="@dimen/dimenSmall"
+                    android:text="Transfer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/_12ssp"
+                    app:cornerRadius="@dimen/dimenXSmall"
+                    app:layout_constraintStart_toStartOf="@id/txtMainFeature"
+                    app:layout_constraintTop_toBottomOf="@id/txtMainFeature"
+                    app:strokeColor="@color/primary_light"
+                    app:strokeWidth="2dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

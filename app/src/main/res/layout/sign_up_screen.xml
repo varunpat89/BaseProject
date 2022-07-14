@@ -19,10 +19,10 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/txtTitle"
         style="@style/textView"
         android:layout_marginTop="@dimen/dimenLarge"
-        android:text="Sign up to FIAT Wallet "
+        android:text="@string/sign_up_to"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,10 +34,10 @@
         android:layout_marginTop="@dimen/dimenLarge"
         android:paddingStart="@dimen/dimenXXLarge"
         android:paddingEnd="@dimen/dimenXXLarge"
-        android:text="A verification code will be sent to the phone number registered to your OXY chat account."
+        android:text="@string/verification_code_send_info"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilCountry"

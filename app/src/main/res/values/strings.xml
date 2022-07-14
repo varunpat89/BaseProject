@@ -4,22 +4,6 @@
     <string name="chat">Chat</string>
     <string name="calls">Calls</string>
     <string name="contacts">Contacts</string>
-
-<!--    <string name="title_onboarding_1">Features introduction 1</string>-->
-<!--    <string name="description_onboarding_1">1 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
-<!--    <string name="thumbnail_onboarding_1"></string>-->
-<!--    <string name="title_onboarding_2">Features introduction 2</string>-->
-<!--    <string name="description_onboarding_2">1 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
-<!--    <string name="thumbnail_onboarding_2"></string>-->
-<!--    <string name="title_onboarding_3">Features introduction 3</string>-->
-<!--    <string name="description_onboarding_3">3 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
-<!--    <string name="thumbnail_onboarding_3"></string>-->
-<!--    <string name="title_onboarding_4">Features introduction 4</string>-->
-<!--    <string name="description_onboarding_4">4 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
-<!--    <string name="thumbnail_onboarding_4"></string>-->
-<!--    <string name="title_onboarding_5">Features introduction 5</string>-->
-<!--    <string name="description_onboarding_5">5 To let user know how can FIAT Wallet\nhelp them to solve their problems</string>-->
-<!--    <string name="thumbnail_onboarding_5">https://cdn.pixabay.com/photo/2014/10/23/10/10/dollars-499481_1280.jpg</string>-->
     <string name="login">Login</string>
     <string name="get_started">Get Started</string>
     <string name="verification_code">Verification code</string>
@@ -33,4 +17,8 @@
     <string name="continues">Continue</string>
     <string name="email">Email</string>
     <string name="check_your_email_for_a_confirmation_link_to_continue">Check your email for a confirmation link to continue</string>
+    <string name="sign_up_info">Enjoy Mango wallet Demo and finish signing up for the full experience!</string>
+    <string name="fiat_wallet">FIAT Wallet</string>
+    <string name="sign_up_to">Sign up to</string>
+    <string name="verification_code_send_info">A verification code will be sent to the phone number registered to your OXY chat account.</string>
 </resources>

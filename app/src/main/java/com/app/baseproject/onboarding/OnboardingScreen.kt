@@ -11,11 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import coil.load
+import coil.transform.CircleCropTransformation
+import coil.transform.RoundedCornersTransformation
 import com.app.baseproject.R
 import com.app.baseproject.databinding.OnboardingScreenBinding
-import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
-import kotlinx.coroutines.flow.collect
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.unloadKoinModules
@@ -30,7 +31,10 @@ class OnboardingScreen : Fragment() {
         @JvmStatic
         @BindingAdapter("srcRemote")
         fun bindImage(imageView: ImageView, url: String) {
-            Glide.with(imageView.context).load(url).into(imageView)
+            imageView.load(url) {
+                crossfade(true)
+                transformations(CircleCropTransformation())
+            }
         }
     }
 

@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi
 import com.app.baseproject.bottom_menu.bottomMenuConfigModule
 import com.app.baseproject.utils.BBLogger
 import com.app.baseproject.di.coreModule
+import com.app.baseproject.di.networkModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -31,7 +32,7 @@ class BaseApplication : Application() {
     private fun loadKoinModules() {
         startKoin {
             androidContext(this@BaseApplication)
-            modules( coreModule + bottomMenuConfigModule )
+            modules(  networkModule + coreModule  + bottomMenuConfigModule /*+ contactsModule*/ )
         }
     }
 

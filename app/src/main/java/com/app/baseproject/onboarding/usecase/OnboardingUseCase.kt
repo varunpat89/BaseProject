@@ -1,4 +1,4 @@
-package com.backbase.retailbanking.onboarding.usecase
+package com.app.baseproject.onboarding.usecase
 
 internal interface OnboardingUseCase {
 

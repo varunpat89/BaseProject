@@ -1,4 +1,4 @@
-package com.backbase.retailbanking.onboarding.usecase
+package com.app.baseproject.onboarding.usecase
 
 import com.app.baseproject.utils.preferance.PreferenceManager
 

@@ -29,6 +29,13 @@ class SignUpScreen : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val walletName = getArguments()?.getString(AppConstants.WALLET_NAME)
+        binding.txtTitle.text = getString(R.string.sign_up_to) + " $walletName"
+    }
+
     private fun setOnClickEvent(binding: SignUpScreenBinding) {
         binding.btnSignUp.setOnClickListener {
             navigateToSignUpScreen(binding.edtNumber.text)
@@ -39,7 +46,7 @@ class SignUpScreen : Fragment() {
         val bundle = Bundle()
         bundle.putInt(AppConstants.NUMBER, text.toString().toInt())
         findNavController().navigate(
-            R.id.action_signUpScreen_to_verificationCodeScreen,bundle
+            R.id.action_signUpScreen_to_verificationCodeScreen, bundle
         )
     }
 }
